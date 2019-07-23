@@ -1,11 +1,47 @@
 .crystal{
     border:1px solid green;
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
+    margin-right: 5px;
 }
 
 .crystals{
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    
+
+}
+
+img{
+    width:50px;
+}
+
+h1{
+    background-color: chocolate;
+    color:white;
+    width:250px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.paragraph{
+    background-color: burlywood;
+    color: forestgreen;
+    width:380px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+body{
+    background-image: url(https://freefrontend.com/assets/img/css-background-patterns/simple-pattern-with-css3.png);
+
+}
+
+#result{
+    width:150px;
+    height:100px;
+    background-color: mediumseagreen;
+    font-size: 30px;
+    margin-top: 10px;
 }

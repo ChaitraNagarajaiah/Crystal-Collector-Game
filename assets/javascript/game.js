@@ -13,34 +13,59 @@ let wins=0;
 let lost=0;
 let previousNum=0;
 
+var resetAndstart = function () {
+    $(".crystals").empty();
+
+    var images = ['https://i.etsystatic.com/13015452/r/il/d9eb95/1275014621/il_794xN.1275014621_8931.jpg',
+    'https://miro.medium.com/max/2520/0*AmwIyi21fDd9Guwz.jpg',
+    'https://images-na.ssl-images-amazon.com/images/I/61NHzqPotVL._SX425_.jpg',
+    'http://kristalcanada.com/EN/wp-content/uploads/2013/10/030469006251-21.jpg'];
+
 random_result=Math.floor(Math.random()*101)+19;
 
- $("#result").html('Random Result: '+ random_result);
+ $("#result").html(+ random_result);
 
 for(i=0;i<4;i++){
     var random = Math.floor(Math.random()*11)+1;
     //console.log(random)
+    
     var crystal=$("<div>");
     crystal.attr({
         "class":'crystal',
         "data-random":random});
+
+        crystal.css({
+            "background-image":"url('" + images[i] + "')",
+            "background-size":"cover"
+        })
     $(".crystals").append(crystal);
 }
- $(".crystal").on('click',function(){
+$("#previous").html("Your total Score is: "+ previousNum);
+}
+resetAndstart();
+
+ $(document).on('click', ".crystal " ,function(){
 var num= parseInt($(this).attr('data-random'));
 
 previousNum += num;
+$("#previous").html("Your total Score is: "+ previousNum);
 console.log(previousNum);
+
 
 if (previousNum>random_result){
 lost++;
-$("#lost").html(lost);
+$("#lost").html(" losses: "+ lost);
+previousNum=0;
+resetAndstart();
 }
 else if(previousNum===random_result){
     wins++;
 
-$("#wins").html(wins);
+$("#wins").html(" win: "+ wins);
+previousNum=0;
+resetAndstart();
 }
+ 
 
 
  });
