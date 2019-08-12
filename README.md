@@ -2,5 +2,5 @@
 
 Here are the links for project
 
-https://chaitranagarajaiah.github.io/unit-4-game/.
-https://github.com/ChaitraNagarajaiah/unit-4-game
+https://chaitranagarajaiah.github.io/Crystal-Collector-Game/
+https://github.com/ChaitraNagarajaiah/Crystal-Collector-Game
